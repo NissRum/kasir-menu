@@ -1,0 +1,81 @@
+package kasirapp;
+import javax.swing.*;
+
+public class App {
+    public static void main(String[] args) {
+        System.out.println("GUI Start");
+        JFrame jf = new JFrame();
+        int prsSoto, prsSate, prsMie, prsAyam, prsBebek, prsNasgor;
+        long hrgSoto = 15000; long hrgSate = 18000; long hrgMie = 10000;
+        long hrgAyam = 15000; long hrgBebek = 20000; long hrgNasgor = 16000;
+        long totalSoto, totalSate, totalMie, totalAyam, totalBebek, totalNasgor;
+        int menuInt;
+        
+        do {
+            String menu = JOptionPane.showInputDialog(jf, "========= DAFTAR MENU ========="
+                    + "\n(1) Soto Betawi                      [Rp 15000]"
+                    + "\n(2) Sate Ayam                        [Rp 18000]"
+                    + "\n(3) Mie Ayam                          [Rp 10000]"
+                    + "\n(4) Ayam Goreng                   [Rp 15000]"
+                    + "\n(5) Bebek Goreng                  [Rp 20000]"
+                    + "\n(6) Nasi Goreng                      [Rp 16000]");
+            menuInt = Integer.parseInt(menu);
+            String porsi = JOptionPane.showInputDialog(jf, "Masukkan jumlah porsi");
+            String uang = JOptionPane.showInputDialog(jf, "Masukkan nominal uang");
+            long uangInt = Integer.parseInt(uang);
+                switch (menuInt) {
+                    case 1:
+                        prsSoto = Integer.parseInt(porsi);
+                        totalSoto = (long) hrgSoto * prsSoto;
+                        if (uangInt >= totalSoto) {
+                                long kembalian = uangInt - totalSoto;
+                                JOptionPane.showMessageDialog(jf, "Nominal uang : Rp"+uangInt+"\nTotal harga  : Rp"+totalSoto+"\nKembali      : Rp"+kembalian);
+                        }else JOptionPane.showMessageDialog(jf, "Maaf uang tidak cukup");
+                        
+                    case 2:
+                        prsSoto = Integer.parseInt(porsi);
+                        totalSoto = (long) hrgSoto * prsSoto;
+                        if (uangInt >= totalSoto) {
+                                long kembalian = uangInt - totalSoto;
+                                JOptionPane.showMessageDialog(jf, "Nominal uang : Rp"+uangInt+"\nTotal harga  : Rp"+totalSoto+"\nKembali      : Rp"+kembalian);
+                        }else JOptionPane.showMessageDialog(jf, "Maaf uang tidak cukup");
+                        break;
+                        
+                    case 3:
+                        prsSoto = Integer.parseInt(porsi);
+                        totalSoto = (long) hrgSoto * prsSoto;
+                        if (uangInt >= totalSoto) {
+                                long kembalian = uangInt - totalSoto;
+                                JOptionPane.showMessageDialog(jf, "Nominal uang : Rp"+uangInt+"\nTotal harga  : Rp"+totalSoto+"\nKembali      : Rp"+kembalian);
+                        }else JOptionPane.showMessageDialog(jf, "Maaf uang tidak cukup");
+                        break;
+                    case 4:
+                        prsSoto = Integer.parseInt(porsi);
+                        totalSoto = (long) hrgSoto * prsSoto;
+                        if (uangInt >= totalSoto) {
+                                long kembalian = uangInt - totalSoto;
+                                JOptionPane.showMessageDialog(jf, "Nominal uang : Rp"+uangInt+"\nTotal harga  : Rp"+totalSoto+"\nKembali      : Rp"+kembalian);
+                        }else JOptionPane.showMessageDialog(jf, "Maaf uang tidak cukup");
+                        break;
+                    case 5:
+                        prsSoto = Integer.parseInt(porsi);
+                        totalSoto = (long) hrgSoto * prsSoto;
+                        if (uangInt >= totalSoto) {
+                                long kembalian = uangInt - totalSoto;
+                                JOptionPane.showMessageDialog(jf, "Nominal uang : Rp"+uangInt+"\nTotal harga  : Rp"+totalSoto+"\nKembali      : Rp"+kembalian);
+                        }else JOptionPane.showMessageDialog(jf, "Maaf uang tidak cukup");
+                        break;
+                    case 6:
+                        prsSoto = Integer.parseInt(porsi);
+                        totalSoto = (long) hrgSoto * prsSoto;
+                        if (uangInt >= totalSoto) {
+                                long kembalian = uangInt - totalSoto;
+                                JOptionPane.showMessageDialog(jf, "Nominal uang : Rp"+uangInt+"\nTotal harga  : Rp"+totalSoto+"\nKembali      : Rp"+kembalian);
+                        }else JOptionPane.showMessageDialog(jf, "Maaf uang tidak cukup");
+                        break;
+                }
+        
+        }while (menuInt != 3);
+        System.out.println("GUI End");  
+    }
+}
